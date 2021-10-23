@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 const uniqid = require("uniqid");
+const fs = require("fs");
+
 
 const app = express();
 const {notes} = require("./db/db.json");
@@ -13,6 +15,29 @@ app.use(express.json());
 //get files like css, makes all files in the public folder static resources
 app.use(express.static("public"));
 
+function createNewNote (body, notesArray) {
+    const note = body;
+    notesArray.push(note);
+    fs.writeFileSync(
+        path.join(__dirname, "./db/db.json"),
+        JSON.stringify({ notes: notesArray }, null, 2)
+    );
+    return note;
+}
+
+function validateNote(note) {
+    if (note.title === ""|| typeof note.title !== "string") {
+        return false;
+    }
+    if (note.text === "" || typeof note.text !== "string") {
+        return false;
+    }
+    return true
+}
+
+
+
+
 app.get("/api/notes", (req, res) => {
     let results = notes;
     res.json(results);
@@ -20,16 +45,27 @@ app.get("/api/notes", (req, res) => {
 
 app.post("/api/notes", (req, res) => {
     // req.body is incoming content
-    req.body.id = notes.length.toString();
+    req.body.id = uniqid();
 
-    if (!validateAnimal(req.body)) {
-        res.status(400).send("The animal is not properly formatted");
+    if (!validateNote(req.body)) {
+        res.status(400).send("The note is not properly formatted");
     }
     else {
-        const animal = createNewAnimal(req.body, animals);
-        res.json(animal);
+        const note = createNewNote(req.body, notes);
+        res.json(note);
     }
 });
+
+app.delete("/api/notes/:id", (req, res) => {
+    const noteId = req.params.id
+
+    for (let i = 0; i < notes.length; i++) {
+        if (noteId === notes[i].id) {
+          notes.splice(noteId, 1);
+          res.json(notes);
+          return; 
+        }
+    }
 })
 
 
