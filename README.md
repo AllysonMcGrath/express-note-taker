@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a project where we were given the front end html and css and expected to create routes to get and post notes to a notetaking website. The site allows a user to enter a note, which is then added to the notes array and is displayed on the site. The user can also click on a past note to display the details. A delete route was also created so that the user can click on the trash can to delete a note. Express.js was used in order to post, delete, and get notes. The site is 
+This is a project where we were given the front end html and css and expected to create routes to get and post notes to a notetaking website. The site allows a user to enter a note, which is then added to the notes array and is displayed on the site. The user can also click on a past note to display the details. A delete route was also created so that the user can click on the trash can to delete a note. Express.js was used in order to post, delete, and get notes.
 
 
 
