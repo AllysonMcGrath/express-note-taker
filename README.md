@@ -20,7 +20,7 @@ Detailed instructions for cloning GitHub repositories can be found [here.](https
 
 When displaying correctly, the site should look like the below image:
 
-![Website with list of notes and fields to enter note title and text](/images/notetakersite.JPG)
+![Website with list of notes and fields to enter note title and text](/images/notetakersite.png)
 
 
 
