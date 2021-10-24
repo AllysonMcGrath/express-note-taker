@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a project where we were given the front end html and css and expected to create routes to get and post notes to a notetaking website. The site allows a user to enter a note, which is then added to the notes array and is displayed on the site. The user can also click on a past note to display the details. A delete route was also created so that the user can click on the trash can to delete a note. Express.js was used in order to post, delete, and get notes.
+This is a project where we were given the front end html and css and expected to create routes to get and post notes to a notetaking website. The site allows a user to enter a note, which is then added to the notes array and is displayed on the site. The user can also click on a past note to display the details. A delete route was also created so that the user can click on the trash can to delete a note. Express.js was used in order to post, delete, and get notes. The site is 
 
 
 
@@ -22,7 +22,7 @@ When displaying correctly, the site should look like the below image:
 
 ![Website with list of notes and fields to enter note title and text](/images/notetakersite.png)
 
-
+You can use/view the site [here.](https://glacial-plains-48628.herokuapp.com/)
 
 
 Use standard git commands within this repository.
