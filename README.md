@@ -22,7 +22,7 @@ When displaying correctly, the site should look like the below image:
 
 ![Website with list of notes and fields to enter note title and text](/images/notetakersite.png)
 
-You can use/view the site [here.](https://glacial-plains-48628.herokuapp.com/)
+You can use/view the site [here.](https://mcgrath-note-taker.herokuapp.com/)
 
 
 Use standard git commands within this repository.
