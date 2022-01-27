@@ -10,7 +10,7 @@ This is a project where we were given the front end html and css and expected to
 
 To install this project, you can clone the repository by using the command prompt
 
-$ git clone https://github.com/AllysonMcGrath/cbcchallenge11.git
+$ git clone https://github.com/AllysonMcGrath/express-note-taker.git
 
 Detailed instructions for cloning GitHub repositories can be found [here.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 
